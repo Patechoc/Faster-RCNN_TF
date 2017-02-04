@@ -3,8 +3,9 @@ from tensorflow.python.framework import ops
 import roi_pooling_op
 import pdb
 
-
-@tf.RegisterShape("RoiPool")
+### issue 41: https://github.com/smallcorgi/Faster-RCNN_TF/issues/41
+#@tf.RegisterShape("RoiPool")
+@ops.RegisterShape("RoiPool")
 def _roi_pool_shape(op):
   """Shape function for the RoiPool op.
 
